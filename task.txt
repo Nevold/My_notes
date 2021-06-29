@@ -1,0 +1,44 @@
+// возврат функции без вывода
+function multiple(x) {
+  function fn(y) {
+    function gg(z) {
+      return x + y + z;
+    }
+    return gg;
+  }
+
+  return fn;
+}
+
+console.log(multiple(2)(3)(3));
+
+// возврат функции с проходом
+//  переменной через все насквозь
+function second(number) {
+  return number;
+}
+
+function first(number) {
+  return second(number);
+}
+
+function multiple1(number) {
+  return first(number);
+}
+
+console.log(multiple1(first(second(3))));
+
+// вывод функции без прохода
+function second() {
+  return 5;
+}
+
+function first() {
+  return second();
+}
+
+function multiple2() {
+  return first();
+}
+
+console.log(multiple2(first(second())));
