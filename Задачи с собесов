@@ -1,0 +1,26 @@
+const arr = [1, 2, 3, 4, 5];
+
+function multiplyEachByTwo(array) {
+  array.map((e, i) => array.splice(i, 1, e * 2));
+  return array;
+}
+function addToEnd(number) {
+  return function (array) {
+    array.push(number);
+  };
+}
+function sum(array) {
+  return array.reduce((prev, curr) => prev + curr);
+}
+
+Array.prototype.trans = function (...args) {
+  //  исходный массив не изменяется
+  const array = this.slice();
+  // return args.reduce((_, currFunction) => currFunction(array), 0);
+
+  //  исходный массив изменяется (замена array на this)
+  //  return args.reduce((_, currFunction) => currFunction(this), 0);
+
+  // через map (предпочтительно по мне - без мутаций)
+  return args.map((func) => func(array)).pop();
+};
