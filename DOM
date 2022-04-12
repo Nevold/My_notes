@@ -1,0 +1,19 @@
+Важно: DOM-коллекции – только для чтения, Коллекции перебираются циклом for..of. Некоторые начинающие разработчики пытаются использовать для этого цикл for..in
+
+Есть 6 основных методов поиска элементов в DOM:
+
+Метод	Ищет по...      	      Ищет внутри элемента?	   Возвращает живую коллекцию?
+querySelector(CSS-selector)	           ✔	                           -
+querySelectorAll(CSS-selector)	       ✔                            	-
+getElementById(id)	                    -                           	-
+getElementsByName(name)               	-                          	 ✔
+getElementsByTagName(	tag or '*')    	✔	                             ✔
+getElementsByClassName	class       	✔	                             ✔
+
+метод  elem.matches(css-строка, содержащая любой css-селектор, к примеру: "div", "*", "#id" и прочие.), который проверяет, удовлетворяет ли элемент CSS-селектору.
+метод  elem.closest(css) ищет ближайшего по иерархии предка, соответствующему данному CSS-селектору. Сам элемент также включён в поиск.
+метод elemА.contains(elemВ) возвращает Boolean значение, указывающее, является ли узел elemА потомком данного узла elemВ
+
+Есть два основных набора ссылок:
+Для всех узлов(включая текстовые узлы): parentNode, childNodes, firstChild, lastChild, previousSibling, nextSibling.
+Только для узлов-элементов: parentElement, children, firstElementChild, lastElementChild, previousElementSibling, nextElementSibling.
