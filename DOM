@@ -17,3 +17,11 @@ getElementsByClassName	class       	✔	                             ✔
 Есть два основных набора ссылок:
 Для всех узлов(включая текстовые узлы): parentNode, childNodes, firstChild, lastChild, previousSibling, nextSibling.
 Только для узлов-элементов: parentElement, children, firstElementChild, lastElementChild, previousElementSibling, nextElementSibling.
+
+innerHTML: содержимое элемента
+outerHTML: HTML элемента целиком. 
+Важно:в отличие от innerHTML, запись в outerHTML не изменяет элемент. Вместо этого элемент заменяется целиком во внешнем контексте
+textContent: просто текст
+Важно: С innerHTML вставка происходит «как HTML», со всеми HTML-тегами.С textContent вставка получается «как текст», все символы трактуются буквально.
+
+Атрибут и DOM-свойство «hidden» указывает на то, видим ли мы элемент или нет. Технически, hidden работает так же, как style="display:none"
