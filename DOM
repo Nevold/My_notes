@@ -3,12 +3,12 @@
 Есть 6 основных методов поиска элементов в DOM:
 
 Метод	Ищет по...      	      Ищет внутри элемента?	   Возвращает живую коллекцию?
-**querySelector**(CSS-selector)	           ✔	                           -
-querySelectorAll(CSS-selector)	       ✔                            	-
-getElementById(id)	                    -                           	-
-getElementsByName(name)               	-                          	 ✔
-getElementsByTagName(	tag or '*')    	✔	                             ✔
-getElementsByClassName	class       	✔	                             ✔
+querySelector(CSS-selector)	           ✔	                           -
+querySelectorAll(CSS-selector)	        ✔                           	-
+getElementById(id)	                    -                            	-
+getElementsByName(name)               	-                          	  ✔
+getElementsByTagName(	tag or '*')     	✔	                            ✔
+getElementsByClassName	class         	✔	                             ✔
 
 метод  elem.matches(css-строка, содержащая любой css-селектор, к примеру: "div", "*", "#id" и прочие.), который проверяет, удовлетворяет ли элемент CSS-селектору.
 метод  elem.closest(css) ищет ближайшего по иерархии предка, соответствующему данному CSS-селектору. Сам элемент также включён в поиск.
